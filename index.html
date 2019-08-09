@@ -1,176 +1,63 @@
 <!DOCTYPE html>
 <html>
-<title>Jamie Steines</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .bgimg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('images/jamie.jpg');
-    min-height: 100%;
+  background-image: url('./images/jamie_juggle.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  opacity: .7;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
 }
 </style>
 <body>
 
-<!-- Sidebar with image -->
-<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-  <div class="bgimg"></div>
-</nav>
-
-<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-    <i class="fa fa-remove"></i>
-  </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
-    <!-- <a href="#projects" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Engineering Projects</a> -->
-    <!-- <a href="blog.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Art Blog</a> -->
-    <a href="#experience" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Engineering Experience</a>
-    <!-- <a href="#education" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Education</a> -->
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+<div class="bgimg">
+  <div class="topleft">
+    <p>Personal Website</p>
   </div>
-</nav>
-
-<!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:40%">
-
-  <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-  <!-- Header -->
-  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>Jamie Steines</b></h1>
-    <p>Software Engineer & Artist</p>
-    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-    <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <button type="submit" onclick="window.open('Steines-Jamie.pdf')" class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i> Download Resume
-    </button>
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2>About</h2>
-    <hr class="w3-opacity">
-    <p>I am a Software Engineer at Huntington National Bank. I graduated from Ohio State Unversity in Computer Science Engineering in May 2018. I enjoy software development, web development and web design. Additionally, I am a young artist pursuing an art minor while trying to utilize my creativity in any way that I can.
-    </p>
-    <h3 class="w3-padding-16">My Skills</h3>
-    <p class="w3-wide">Back End Engineering</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
-    </div>
-    <p class="w3-wide">Front End Engineering</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
-    </div>
-    <p class="w3-wide">Digital Art</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
-    </div><br>
-
-  <!-- End About Section -->
-  <!-- </div> -->
-
-  <!-- Projects Section -->
-  <!-- <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="projects">
-    <h2 class="w3-text-grey">My Projects</h2> -->
-
-  <!-- End Projects Section -->
-  <!-- </div> -->
-
-  <!-- Portfolio Section -->
-  <!-- <div class="w3-padding-32 w3-content" id="portfolio">
-    <h2 class="w3-text-grey">My Portfolio</h2>
-    <hr class="w3-opacity"> -->
-
-    <!-- Grid for photos -->
-    <!-- <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half"> -->
-        <!-- <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/rocks.jpg" style="width:100%">
-        <img src="/w3images/sailboat.jpg" style="width:100%"> -->
-      <!-- </div> -->
-
-      <!-- <div class="w3-half"> -->
-        <!-- <img src="/w3images/underwater.jpg" style="width:100%">
-        <img src="/w3images/chef.jpg" style="width:100%">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/p6.jpg" style="width:100%"> -->
-      <!-- </div> -->
-    <!-- End photo grid -->
-    <!-- </div> -->
-  <!-- End Portfolio Section -->
-  <!-- </div> -->
-
-  <!-- Experience Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="experience">
-    <h2 class="w3-text-grey">Experience</h2>
-    <div style="display:flex;justify-content:space-between;padding:0cm 3cm 0cm 1cm;">
-      <img src="images/Target_logo.svg" alt="Target Logo" width="20%" height="20%">
-      <img src="images/MRI_Software_logo.svg" alt="MRI Logo" width="30%" height="30%">
-      <img src="images/Huntington.jpeg" alt="Huntington Logo" width="20%" height="20%">
-    </div>
-  <!-- End Experience Section -->
-  <!-- </div> -->
-
-  <!-- Education Section -->
-  <!-- <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="education">
-    <h2 class="w3-text-grey">Education</h2> -->
-
-  <!-- End Education Section -->
-  <!-- </div> -->
-
-  <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
-    <h2>Contact Me</h2>
-    <hr class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Columbus.Ohio</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (330) 647-7118</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: jamie.roberta@gmail.com</p>
-    </div>
-
-  <!-- End Contact Section -->
+  <div class="middle">
+    <h1>COMING BACK SOON</h1>
+    <hr>
+    <p>Jamie Politano</p>
   </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-    <a href="https://www.facebook.com/jamie.steines" class="fa fa-facebook-official w3-hover-opacity" style="text-decoration: none" target="_blank"></a>
-    <a href="https://www.instagram.com/jamie_jeines/?hl=en" class="fa fa-instagram w3-hover-opacity" style="text-decoration: none" target="_blank"></a>
-    <!-- <a href="https://www.facebook.com/jamie.steines" class="fa fa-snapchat w3-hover-opacity" style="text-decoration: none" target="_blank"></a> -->
-    <a href="https://twitter.com/Jamie_Jeines" class="fa fa-twitter w3-hover-opacity" style="text-decoration: none" target="_blank"></a>
-    <a href="https://www.pinterest.com/jamieroberta/" class="fa fa-pinterest-p w3-hover-opacity" style="text-decoration: none" target="_blank"></a>
-    <a href="https://www.linkedin.com/in/jamiesteines/" class="fa fa-linkedin w3-hover-opacity" style="text-decoration: none" target="_blank"></a>
-    <a href="https://github.com/jamieroberta" class="fa fa-github w3-hover-opacity" style="text-decoration: none" target="_blank"></a>
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
+  <div class="bottomleft">
+    <p>Software Engineer at Beam Dental</p>
+  </div>
 </div>
-
-<!-- Add Google Maps -->
-<script>
-
-// Open and close sidebar
-function openNav() {
-    document.getElementById("mySidebar").style.width = "60%";
-    document.getElementById("mySidebar").style.display = "block";
-}
-
-function closeNav() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-</script>
 
 </body>
 </html>
